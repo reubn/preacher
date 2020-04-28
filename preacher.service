@@ -1,0 +1,16 @@
+[Unit]
+Description=Preacher mDNS to DNS Bridge
+After=network-online.target nss-lookup.target
+Wants=network-online.target nss-lookup.target
+
+[Service]
+Type=simple
+User=pi
+Environment=NODE_VERSION=14
+WorkingDirectory=/home/pi/preacher/
+ExecStart=/home/pi/.nvm/nvm-exec node .
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
