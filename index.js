@@ -2,13 +2,13 @@ import named from 'named'
 
 import colors from 'colors/safe.js'
 
-import mDNS from './mDNS.js'
+import mDNS from './mDNS/index.js'
 
-import {DNSTTL, DNSRootDomain, mDNSRootDomain, port, addr} from './config.js'
+import {DNSTTL, DNSRootDomain, mDNSRootDomain, DNSPort, DNSAddress} from './config.js'
 
 const dnsServer = named.createServer()
 
-dnsServer.listen(port, addr, function() {
+dnsServer.listen(DNSPort, DNSAddress, function() {
   console.log('DNS Server Started')
 })
 
@@ -22,10 +22,10 @@ dnsServer.on('query', async query => {
   console.log(colors.yellow.bold('Q'), {A: colors.green.bold('   A'), AAAA: colors.cyan.bold('AAAA')}[type], domain)
 
   // Convert DNS domain into its mDNS equivalent
-  const hostname = domain.replace(new RegExp(`\.${DNSRootDomain}$`), `.${mDNSRootDomain}`).toLowerCase()
+  const name = domain.replace(new RegExp(`\.${DNSRootDomain}$`), `.${mDNSRootDomain}`).toLowerCase()
 
   if(type === 'A'){
-    const address = await mDNS({hostname, type: 'A'}).catch(() => undefined)
+    const address = await mDNS({name, type: 'A'}).catch(() => undefined)
 
     if(address) {
       const record = new named.ARecord(address)
@@ -34,7 +34,7 @@ dnsServer.on('query', async query => {
   }
 
   if(type === 'AAAA'){
-    const address = await mDNS({hostname, type: 'AAAA'}).catch(() => undefined)
+    const address = await mDNS({name, type: 'AAAA'}).catch(() => undefined)
 
     if(address) {
       const record = new named.AAAARecord(address)
