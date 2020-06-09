@@ -1,5 +1,5 @@
 {
-  "name": "sibyl",
+  "name": "preacher",
   "version": "0.0.1",
   "description": "mDNS Backed DNS Server",
   "main": "index.js",
