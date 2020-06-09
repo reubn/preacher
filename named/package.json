@@ -1,0 +1,57 @@
+{
+  "_from": "github:mango-chutney/node-named#select-correct-address-family",
+  "_id": "named@0.0.1",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/named",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "mango-chutney/node-named#select-correct-address-family",
+    "rawSpec": "mango-chutney/node-named#select-correct-address-family",
+    "saveSpec": "github:mango-chutney/node-named#select-correct-address-family",
+    "fetchSpec": null,
+    "gitCommittish": "select-correct-address-family"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "github:mango-chutney/node-named#06d940a35be68500c0dd939734c6dc2ed00895d6",
+  "_spec": "mango-chutney/node-named#select-correct-address-family",
+  "_where": "/Users/reuben/Projects/sibyl",
+  "author": {
+    "name": "trevoro",
+    "email": "trevoro@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/trevoro/node-named/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Mark Cavage"
+    }
+  ],
+  "dependencies": {
+    "bunyan": "0.7.0",
+    "ipaddr.js": "0.1.1"
+  },
+  "deprecated": false,
+  "description": "DNS server library for node.js",
+  "devDependencies": {
+    "nodeunit": "0.9.0"
+  },
+  "engines": {
+    "node": ">=0.6"
+  },
+  "homepage": "https://github.com/trevoro/node-named#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "named",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/trevoro/node-named.git"
+  },
+  "version": "0.0.1"
+}

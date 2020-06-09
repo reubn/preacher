@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
-    "multicast-dns": "^7.2.2",
-    "named": "github:mango-chutney/node-named#select-correct-address-family"
+    "ip-address": "^6.3.0",
+    "multicast-dns": "^7.2.2"
   }
 }
