@@ -10,7 +10,7 @@
     "dns",
     "vpn"
   ],
-  "author": "Reuben Eggar",
+  "author": "Reuben",
   "license": "MIT",
   "dependencies": {
     "bunyan": "^1.8.12",
